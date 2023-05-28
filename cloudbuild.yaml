@@ -11,10 +11,12 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/${PROJECT_ID}/node-web-app:$COMMIT_SHA']
 
-
+#kubernetes deployment setup 
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['set', 'image', 'deployment/mydeployment', 'mynode=gcr.io/sit323-23t1-rizvi-690fec0/node-web-app:$COMMIT_SHA']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-west1'
   - 'CLOUDSDK_CONTAINER_CLUSTER=cluster1'
+
+  # Cluster name we are updating deployment of cluster in region
 
