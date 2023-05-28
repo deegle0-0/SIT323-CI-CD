@@ -16,5 +16,5 @@ steps:
   args: ['set', 'image', 'deployment/mydeployment', 'mynode=gcr.io/sit323-23t1-rizvi-690fec0/node-web-app:$COMMIT_SHA']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-west1'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cluster'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=cluster1'
 
